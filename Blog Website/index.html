@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live project</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        img.rounded-t-lg {
+            width: 100%;
+            height: 400px;
+            object-fit: fill;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/96883a21b6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <section class=" text-center">
+        <div id="category_container" class="tabs inline-flex">
+
+        </div>
+    </section>
+    <section class="my-10 container mx-auto">
+        <h1 class="text-4xl font-bold text-gray-600 text-center font-mono">Top News</h1>
+        <!-- blog post container -->
+        <div id="post_container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        </div>
+
+
+        
+        <dialog id="showMoreInfoModal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <div id="modal_container">
+
+                </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+
+                    <button class="btn">Close</button>
+                </div>
+            </form>
+        </dialog>
+
+
+
+        
+    </section>
+
+    <section>
+      
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

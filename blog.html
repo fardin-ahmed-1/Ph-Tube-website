@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ph Tube</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- <link rel="shortcut icon" href="./image/Logo.png" type="image/x-icon"> -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            PrimeryColor: '#FF1F3D',
+            secondColor: '#25252533',
+            headingColor: '#171717;',
+            textColor: '#171717B3',
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="container mx-auto py-10 px-4">
+    <div class="flex flex-col md:flex-row gap-y-3 items-center justify-between">
+      <a href="./index.html"><img src="./image/Logo.png" alt=""></a>
+      <button id="sortview" class="text-lg font-medium text-headingColor bg-secondColor py-3 px-6 rounded-md">Sort by
+        view</button>
+      <a class="text-lg font-medium text-white bg-PrimeryColor  py-3 px-6 rounded-md">Blog</a>
+    </div>
+  </header>
+  <section class="container mx-auto px-4 ">
+    <div class="pb-10">
+      <hr class="border border-gray-300 w-full h-0">
+    </div>
+
+
+    <div class="mb-6">
+      <h1 class="text-2xl lg:text-3xl font-medium text-headingColor pb-3"> Question: "Discuss the scope of var, let, and const"</h1> 
+      <h2 class="font-medium text-PrimeryColor text-xl py-2">Answer: </h2>
+      <p class="text-xl font-normal text-textColor">In JavaScript, the scope of variables declared with var, let, and const differs. Understanding these scopes is crucial for writing clean and maintainable code.</p>
+
+      <p class="text-xl font-medium text-headingColor mb-3 mt-5">1. var Scope:</p>
+      <ul class="text-lg font-normal text-textColor list-item ml-14">
+        <li class="list-disc py-1">var declarations are function-scoped. They are accessible within the function in which they are declared, and not outside it.</li>
+
+        <li class="list-disc py-1">If a var is declared outside of any function, it becomes a global variable, accessible throughout the entire program.</li>
+
+        <li class="list-disc py-1">Variables declared with var are also subject to "hoisting," which means the declaration is moved to the top of its containing function or global scope during compilation.</li>
+      </ul>
+
+      <p class="text-xl font-medium text-headingColor my-3">2. let and const Scope:</p>
+      <ul class="text-lg font-normal text-textColor list-item ml-14">
+        <li class="list-disc py-1">Both let and const have block-level scope. They are confined to the block in which they are declared, such as within loops or if statements.</li>
+
+        <li class="list-disc py-1">Unlike var, let and const are not hoisted to the top of their containing block. They remain inaccessible until the point of declaration.</li>
+      </ul>
+
+      <p class="text-xl font-medium text-headingColor my-3">3. let vs. const</p>
+      <ul class="text-lg font-normal text-textColor list-item ml-14">
+        <li class="list-disc py-1">let is used for variables that may change their values.</li>
+
+        <li class="list-disc py-1">const is used for variables that should not change their values once assigned.</li>
+
+        <li class="list-disc py-1">Both let and const are block-scoped and do not get hoisted.</li>
+      </ul>
+    </div>
+
+
+    <div class="mb-6">
+      <h1 class="text-2xl lg:text-3xl font-medium text-headingColor pb-3"> Question: "Tell us the use cases of null and undefined"</h1> 
+      <h2 class="font-medium text-PrimeryColor text-xl py-2">Answer: </h2>
+      <p class="text-xl font-normal text-textColor"> In JavaScript, null and undefined are two distinct primitive values, each with its own use cases: </p>
+
+      <p class="text-xl font-medium text-headingColor mb-3 mt-5">1. undefined:</p>
+      <ul class="text-lg font-normal text-textColor list-item ml-14">
+        <li class="list-disc py-1"> <span class="text-headingColor font-medium">Default Value:</span> Variables declared without an initial value are assigned undefined by default. This often happens with function parameters when they are not provided.</li>
+
+        <li class="list-disc py-1">  <span class="text-headingColor font-medium">Missing Properties: </span> When you try to access an object property that doesn't exist, JavaScript returns undefined.</li>
+        <li class="list-disc py-1">  <span class="text-headingColor font-medium"> Return Value: </span> Functions that don't explicitly return a value return undefined.</li>
+
+        
+      </ul>
+
+      <p class="text-xl font-medium text-headingColor mb-3 mt-4">2. null:</p>
+      <ul class="text-lg font-normal text-textColor list-item ml-14">
+        <li class="list-disc py-1"> <span class="text-headingColor font-medium">Explicit Absence of Value</span> Unlike undefined, null is often used to explicitly indicate the absence of a value or that a variable has been intentionally set to "nothing."</li>
+
+        <li class="list-disc py-1"> <span class="text-headingColor font-medium">Initializing: </span> Sometimes, developers initialize variables or properties with null when they expect a value to be assigned later.</li>
+
+        <li class="list-disc py-1"> <span class="text-headingColor font-medium">Resetting: </span> Setting a variable or property to null can be a way to reset it to an initial state.</li>
+
+        <li class="list-disc py-1"> <span class="text-headingColor font-medium">Avoiding Unintended Values: </span> In certain cases, setting a variable to null can help avoid unintended behavior when compared to undefined.</li>
+      </ul>
+
+      
+    </div>
+
+
+    <div class="mb-6">
+      <h1 class="text-2xl lg:text-3xl font-medium text-headingColor pb-3 "> Question: "What do you mean by REST API?" </h1> 
+      <h2 class="font-medium text-PrimeryColor text-xl py-2">Answer: </h2>
+      <p class="text-xl font-normal text-textColor"> REST API stands for Representational State Transfer Application Programming Interface. It is a set of architectural principles for designing networked applications. </p>
+
+      <p class="text-xl font-medium text-headingColor mb-3 mt-5">Here are a few important points: </p>
+
+      <ul class="text-lg font-normal text-textColor list-item ml-14">
+        <li class="list-disc py-1"> <span class="text-headingColor font-medium">1. Stateless Communication: </span> REST APIs are designed to be stateless, meaning that each request from a client to a server must contain all the information needed to understand and process the request. There should be no dependency on previous requests.</li>
+
+        <li class="list-disc py-1">  <span class="text-headingColor font-medium">2. Resource-Based: </span> In a REST API, resources (such as data objects) are identified by URLs. Each resource can be operated upon using a standard set of HTTP methods (e.g., GET to retrieve, POST to create, PUT to update, DELETE to remove).</li>
+
+        <li class="list-disc py-1">  <span class="text-headingColor font-medium">3. Use of HTTP: </span> REST APIs typically use HTTP as the communication protocol. They make use of standard HTTP methods and status codes to indicate the outcome of a request. For example, a successful GET request might return a status code of 200, while a resource not found might return a 404 status code. </li>
+      </ul>
+      <p class="text-xl font-normal text-textColor mt-2"> These principles make REST APIs easy to understand, scalable, and stateless, which is why they are widely used for building web services and APIs on the internet. </p>
+
+    
+      
+    </div>
+
+
+
+
+  
+   
+  </section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ph Tube</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- <link rel="shortcut icon" href="./image/Logo.png" type="image/x-icon"> -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            PrimeryColor: '#FF1F3D',
+            secondColor: '#25252533',
+            headingColor: '#171717;',
+            textColor: '#171717B3',
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="container mx-auto py-10 px-4">
+    <div class="flex flex-col md:flex-row gap-y-3 items-center justify-between">
+      <a href="./index.html"><img src="./image/Logo.png" alt=""></a>
+      <button id="sortview" class="text-lg font-medium text-headingColor bg-secondColor py-3 px-6 rounded-md">Sort by
+        view</button>
+        <a href="./blog.html" class="text-lg font-medium text-white bg-PrimeryColor  py-3 px-6 rounded-md">Blog</a>
+    </div>
+  </header>
+
+<!-- Post Categorys  -->
+  <section class="container mx-auto px-4 ">
+    <div class="mb-10">
+      <div class="pb-10">
+        <hr class="border border-gray-300 w-full h-0">
+      </div>
+      <div id="category_container" class="tabs  justify-center">
+      </div>
+    </div>
+  </section>
+
+  <!-- Post container  -->
+  <section class="my-10  container mx-auto px-4">
+    <div id="post_container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
+    </div>
+
+<!-- Errow message showing -->
+    <div id="ErrorMessage">
+    </div>
+  </section>
+  <script src="./app.js"></script>
+</body>
+</html>
